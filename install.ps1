@@ -1,0 +1,1 @@
+Add-Content $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 "function videotomp4 {`nParam (`n[Parameter(Mandatory=`$true,Position=0)]`n[string] `$name`n)`n`$baseName = (Get-Item `$name).Basename`n`$mp4Ext = -join(`$baseName, `".mp4`")`nffmpeg -i `$name `$mp4Ext`n}"
