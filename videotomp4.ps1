@@ -7,4 +7,5 @@ function videotomp4 {
         $baseName = (Get-Item $name).Basename
         $mp4Ext = -join($baseName, ".mp4")
         ffmpeg -i $name $mp4Ext
+        explorer /select,$mp4Ext
 }
